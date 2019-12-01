@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-namespace AdventOfCode2019
+namespace AdventOfCode2019.Solutions
 {
     class Day1 : Day
     {
@@ -16,7 +15,7 @@ namespace AdventOfCode2019
                 input.Add(int.Parse(line));
             }
 
-            Console.WriteLine($"Total fuel needed {input.Sum(i => (i/3)-2)}");
+            Console.WriteLine($"Total fuel needed {input.Sum(i => (i / 3) - 2)}");
         }
 
         public override void Part2()
