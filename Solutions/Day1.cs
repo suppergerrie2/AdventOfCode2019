@@ -8,27 +8,13 @@ namespace AdventOfCode2019.Solutions
     {
         public override void Part1()
         {
-            List<int> input = new List<int>();
-
-            foreach (var line in InputLines())
-            {
-                input.Add(int.Parse(line));
-            }
-
-            Console.WriteLine($"Total fuel needed {input.Sum(i => (i / 3) - 2)}");
+            Console.WriteLine($"Total fuel needed {GetInputAsT(int.Parse).Sum(i => (i / 3) - 2)}");
         }
 
         public override void Part2()
         {
-            List<int> input = new List<int>();
-
-            foreach (var line in InputLines())
-            {
-                input.Add(int.Parse(line));
-            }
-
             int totalFuel = 0;
-            foreach (int mass in input)
+            foreach (int mass in GetInputAsT(int.Parse))
             {
                 int moduleFuel = (mass / 3) - 2;
 
@@ -42,7 +28,6 @@ namespace AdventOfCode2019.Solutions
             }
 
             Console.WriteLine($"Total fuel needed {totalFuel}");
-
         }
     }
 }

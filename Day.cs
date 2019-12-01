@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Numerics;
@@ -25,6 +26,11 @@ namespace AdventOfCode2019
         public string InputAsString()
         {
             return File.ReadAllText(GetInputPath());
+        }
+
+        public IEnumerable<T> GetInputAsT<T>(Func<string,T> parse)
+        {
+            return InputLines().Select(parse);
         }
 
         public List<Vector3> InputAsVectors()
